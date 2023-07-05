@@ -45,4 +45,4 @@ def home():
 
 if __name__ == "__main__":
     load_app()
-    app.run(debug=True, port=8000)
+    app.run(debug=False, port=8000)
