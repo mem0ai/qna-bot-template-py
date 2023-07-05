@@ -1,9 +1,9 @@
 
-# qna-bot-template-python
+# qna-bot-template-py
 
 [![](https://dcbadge.vercel.app/api/server/nhvCbCtKV?style=flat)](https://discord.gg/nhvCbCtKV)
 
-qna-bot-template-python is a frontend app created in Next.js powered by [embedchain](https://github.com/embedchain/embedchain). embedchain is a framework to easily create LLM powered bots over any dataset. If you want a javascript version, check out [embedchain-js](https://github.com/embedchain/embedchainjs)
+qna-bot-template-py is a frontend app created in Flask powered by [embedchain](https://github.com/embedchain/embedchain). embedchain is a framework to easily create LLM powered bots over any dataset. If you want a javascript version, check out [embedchain-js](https://github.com/embedchain/embedchainjs)
 
 It abstracts the entire process of loading dataset, chunking it, creating embeddings and then storing in vector database.
 
@@ -22,8 +22,8 @@ If you want to create a Naval Ravikant bot which has 2 of his blog posts, as wel
 - Make sure that you have the package cloned locally, using the following commands
 
 ```bash
-git clone https://github.com/embedchain/qna-bot-template-python.git
-cd qna-bot-template-python
+git clone https://github.com/embedchain/qna-bot-template-py.git
+cd qna-bot-template-py
 ```
 
 - Create and activate your virtual environment as follows
