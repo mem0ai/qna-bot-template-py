@@ -29,8 +29,13 @@ cd qna-bot-template-py
 - Create and activate your virtual environment as follows
 
 ```bash
+# For Linux Users
 virtualenv -p $(which python3) pyenv
 source pyenv/bin/activate
+
+# For Windows users
+virtualenv pyenv
+.\pyenv\Scripts\activate
 ```
 
 - Now install the required packages using
@@ -41,7 +46,7 @@ pip install -r requirements.txt
 
 - We use OpenAI's embedding model to create embeddings for chunks and ChatGPT API as LLM to get answer given the relevant docs. Make sure that you have an OpenAI account and an API key. If you have don't have an API key, you can create one by visiting [this link](https://platform.openai.com/account/api-keys).
 
-- Rename the `sample.env.local` to `.env.local` and set your environment variables. Here BOT_NAME is the name of the bot that will be displayed in your app.
+- Rename the `sample.env` to `.env` and set your environment variables. Here BOT_NAME is the name of the bot that will be displayed in your app.
 
 ```bash
 OPENAI_API_KEY=""
@@ -53,13 +58,17 @@ BOT_NAME=""
 - Activate your virtual environment
 
 ```bash
+# For Linux Users
 source pyenv/bin/activate
+
+# For Windows Users
+.\pyenv\Scripts\activate
 ```
 
 - Run the development server, using
 
 ```bash
-python app.py
+python main.py
 ```
 
 - Open [http://localhost:8000](http://localhost:8000) with your browser to see the result.
@@ -70,7 +79,8 @@ python app.py
 
 - Your answer will be displayed in the result box below.
 
-- To customize and create your own bot app, go to `app.py` and enter your own data sources in the load_app() function in the following manner
+- To customize and create your own bot app, go to `main.py` and enter your own data sources in the load_app() function in the following manner
+
 ```python
 # Embed Online Resources
 chat_bot_app.add("youtube_video", "https://www.youtube.com/watch?v=3qHkcs3kG44")
@@ -82,7 +92,7 @@ chat_bot_app.add("web_page", "https://nav.al/agi")
 chat_bot_app.add_local("qna_pair", ("Who is Naval Ravikant?", "Naval Ravikant is an Indian-American entrepreneur and investor."))
 ```
 
-- Go to your `.env.local` file and change the bot name to your desired bot name using the `NEXT_PUBLIC_BOT_NAME` env variable.
+- Go to your `.env` file and change the bot name to your desired bot name using the `BOT_NAME` env variable.
 
 - Now reload or run your app again to see the changes.
 
